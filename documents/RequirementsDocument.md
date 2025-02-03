@@ -164,6 +164,16 @@ Undergraduate Student: Responsible for searching and applying for research posit
                              | system informs the student and prevents the application submission.
 | Iteration                  | #	Iteration 1
 
+
+| Use case # 1      |   |
+| ------------------ |--|
+| Name              | "enter your reponse here"  |
+| Participating actor  | "enter your reponse here"  |
+| Entry condition(s)     | "enter your reponse here"  |
+| Exit condition(s)           | "enter your reponse here"  |
+| Flow of events | "enter your reponse here"  |
+| Alternative flow of events    | "enter your reponse here"  |
+| Iteration #         | "enter your reponse here"  |
 ----
 # 3. User Interface
 
