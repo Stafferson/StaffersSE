@@ -28,10 +28,11 @@ Prepared by:
 
 ## Document Revision History
 
-| Name        | Date YYYY-MM-DD | Changes      | Version    |
-| Revision 1  | 2025-02-02      |Initial draft | 0.1        |
-| Revision 2  | 2025-02-03      |Final draft   | 1.0        |
-|             |                 |              |            |
+| Name | Date YYYY-MM-DD | Changes | Version |
+| ------ | ------ | --------- | --------- |
+|Revision 1 |2025-02-02 |Initial draft |0.1        |
+|Revision 2 |2025-02-03 |Final draft |1.0        |
+|      |      |         |         |
 
 ----
 # 1. Introduction
@@ -60,47 +61,56 @@ Generally, it is more effective, user-friendly recruitments platform comparing t
 # 2. Requirements Specification
 
 This section specifies the software product's requirements. Specify all of the software requirements to a level of detail sufficient to enable designers to design a software system to satisfy those requirements, and to enable testers to test that the software system satisfies those requirements.
-
+----
 ## 2.1 Customer, Users, and Stakeholders
 
 Customer:
 
-The primary customer is an academic institution (or individual departments) that want an effective solution for faculty to hire undergraduate students for research positions.
+* The primary customer is an academic institution (or individual departments) that want an effective solution for faculty to hire undergraduate students for research positions.
 
 Users:
 
-Faculty Members: They will use the system to post research opportunities, review applications, and manage candidate applications.
-Undergraduate Students: They will use the system to search for available research positions, submit applications, and track application statuses.
+* Faculty Members: They will use the system to post research opportunities, review applications, and manage candidate applications.
+* Undergraduate Students: They will use the system to search for available research positions, submit applications, and track application statuses.
 
 Stakeholders:
-University Department Heads: Interested in promoting research opportunities and ensuring quality candidate matching
-IT Department: Responsible for the maintenance, security, and general operation of the platform.
+* University Department Heads: Interested in promoting research opportunities and ensuring quality candidate matching
+* IT Department: Responsible for the maintenance, security, and general operation of the platform.
 
 ----
 ## 2.2 User Stories
 
-As a faculty member, I want to post research positions so that I can hire qualified undergraduate candidates for my research projects.
-As a faculty member, I want to review and manage applications so that I can effectively select the best candidates for my research projects.
-As a faculty member, I want to filter applications by criteria (e.g., GPA, major) so that I can quickly find the most suitable candidates.
-As an undergraduate student, I want to search for available research positions so that I can find opportunities 
-As an undergraduate student, I want to apply filter during search for available research positions so that I can find opportunities that match my academic interests and career goals.
-As an undergraduate student, I want to track the status of my applications so that I know if I am being considered or need to apply for other positions.
-As an undergraduate student, I want to withdraw my pending positions so that I dont have to work in positions that I am not interested in.
-As an undergraduate student, I want to apply for desired positions so that I can get hired, do research and gain experience.
+* As a faculty member, I want to post research positions so that I can hire qualified undergraduate candidates for my research projects.
+
+* As a faculty member, I want to review and manage applications so that I can effectively select the best candidates for my research projects.
+
+* As a faculty member, I want to filter applications by criteria (e.g., GPA, major) so that I can quickly find the most suitable candidates.
+
+* As an undergraduate student, I want to search for available research positions so that I can find opportunities 
+
+* As an undergraduate student, I want to apply filter during search for available research positions so that I can find opportunities that match my academic interests and career goals.
+
+* As an undergraduate student, I want to track the status of my applications so that I know if I am being considered or need to apply for other positions.
+
+* As an undergraduate student, I want to withdraw my pending positions so that I dont have to work in positions that I am not interested in.
+
+* As an undergraduate student, I want to apply for desired positions so that I can get hired, do research and gain experience.
 
 ----
 ## 2.3 Use Cases
 
-Actors
-Faculty Member: Responsible for posting research positions and reviewing applications.
-Undergraduate Student: Responsible for searching and applying for research positions.
+Actors:
 
-| Use case # 1               |   
-| Name	                     | Manage Research Positions and Applications
-| Participating actor        | Faculty Member
-| Entry condition(s)	       | Faculty member is logged in and has navigated to the "Manage Positions" section. A research 
-|                            | position draft exists or a new position is being created.
-| Exit condition(s)          | The research position is successfully posted or updated, and any submitted applications are available for review.
+* Faculty Member: Responsible for posting research positions and reviewing applications.
+
+* Undergraduate Student: Responsible for searching and applying for research positions.
+
+| Use case # 1      |   |
+| ------------------ |--|
+| Name              | Manage Research Positions and Applications  |
+| Participating actor  | Faculty Member  |
+| Entry condition(s)     | Faculty member is logged in and has navigated to the "Manage Positions" section. A research position draft exists or a new position is being created. |
+| Exit condition(s)           | The research position is successfully posted or updated, and any submitted applications are available for review.  |
 | Flow of events	           | 1. The faculty member selects "Create New Research Position."
 |                            | 2. The system displays a form to enter position details (title, description, requirements, deadline, etc.).
 |                            | 3. The faculty member fills in and submits the form.
@@ -108,14 +118,14 @@ Undergraduate Student: Responsible for searching and applying for research posit
 |                            | 5. The faculty member navigates to the "Applications" section to review submissions.
 | Alternative flow of events | - If the input validation fails, the system displays error messages and prompts the faculty member to correct the entries.
 |                            | - If the system encounters an error while posting the position, it notifies the faculty member.
-| Iteration                  | #	Iteration 2
+| Iteration #         | #	Iteration 2  |
 
-
-| Use case # 2               |   
-| Name	                     | Search and Apply for Research Position
-| Participating actor        | 	Undergraduate Student
-| Entry condition(s)	       | The student is logged in and navigates to the "Available Positions" section.
-| Exit condition(s)          | The student's application is successfully submitted and acknowledged by the system.
+| Use case # 2      |   |
+| ------------------ |--|
+| Name              |  Search and Apply for Research Position  |
+| Participating actor  | Undergraduate Student  |
+| Entry condition(s)     | The student is logged in and navigates to the "Available Positions" section.  |
+| Exit condition(s)           | The student's application is successfully submitted and acknowledged by the system.  |
 | Flow of events	           | 1. The student accesses the "Available Positions" page.
 |                            | 2. The system displays a list of current research positions with brief details.
 |                	           | 3. The student selects filter criteria (e.g., academic interests, research type, faculty name).
@@ -124,56 +134,43 @@ Undergraduate Student: Responsible for searching and applying for research posit
 |                            | 6. The system displays complete information about the position, including requirements and application deadline.
 |                            | 7. The student clicks on "Apply" and fills in the application form with the required information (e.g., personal statement 
 |                            | resume, etc.).
-|                            | 6. The system validates and submits the application, then confirms successful submission to the student.
+|                            | 8. The system validates and submits the application, then confirms successful submission to the student.
 | Alternative flow of events | - If the students application data is incomplete or invalid, the system prompts for corrections before submission.
-                             | - If the position is no longer available (e.g., the deadline has passed or the position has been filled), the 
-                             | system informs the student and prevents the application submission.
-                             | - If the student does not apply any filter in step 3, defaut filter is "show most recent".
-| Iteration                  | #	Iteration 1
+|                            | - If the position is no longer available (e.g., the deadline has passed or the position has been filled), the 
+|                            | system informs the student and prevents the application submission.
+|                            | - If the student does not apply any filter in step 3, defaut filter is "show most recent".
+| Iteration #         | #	Iteration 1  |
 
-| Use case # 3               |   
-| Name	                     | Filter Applications by Criteria
-| Participating actor        | Faculty Member
-| Entry condition(s)	       | Faculty member is logged in and has navigated to the "Applications" section with applications already submitted for
-                             | research positions.
-| Exit condition(s)          | The system displays a filtered list of applications based on the faculty member’s selected criteria.
+| Use case # 3      |   |
+| ------------------ |--|
+| Name              | Filter Applications by Criteria  |
+| Participating actor  | Faculty Member  |
+| Entry condition(s)     | Faculty member is logged in and has navigated to the "Applications" section with applications already submitted for research positions.  |
+| Exit condition(s)           | The system displays a filtered list of applications based on the faculty member’s selected criteria.  |
 | Flow of events	           | 1. The faculty member accesses the "Applications" section.
 |                            | 2. The system displays a list of all submitted applications.
 |                            | 3. The faculty member selects filter criteria (e.g., GPA, major, graduation year).
 |                            | 4. The system applies the filters and displays the updated list of applications.
 |                            | 5. The faculty member reviews the filtered list.
-| Alternative flow of events | - If no applications meet the selected criteria, the system displays a message indicating no matching results.
-                             | - If invalid filter criteria are selected, the system prompts the faculty member to correct the inputs.
-                             | system informs the student and prevents the application submission.
-| Iteration                  | #	Iteration 3
+| Alternative flow of events    |  - If no applications meet the selected criteria, the system displays a message indicating no matching results. |
+|                             | - If invalid filter criteria are selected, the system prompts the faculty member to correct the inputs.
+| Iteration #         | # Iteration 3  |
 
-
-| Use case # 4               |   
-| Name	                     | Track and Withdraw Application
-| Participating actor        | Undergraduate Student
-| Entry condition(s)	       | The student is logged in and has at least one submitted application.
-| Exit condition(s)          | The student successfully views the application status or withdraws an application if desired.
-| Flow of events	           | 1. The student navigates to the "My Applications" section.
-|                            | 2. The system displays a list of the student’s submitted applications with current statuses (e.g., Under Review,
-|                            | Accepted, Rejected).
+| Use case # 4      |   |
+| ------------------ |--|
+| Name              | Track and Withdraw Application  |
+| Participating actor  | Undergraduate Student  |
+| Entry condition(s)     | The student is logged in and has at least one submitted application.  |
+| Exit condition(s)           | The student successfully views the application status or withdraws an application if desired. |
+| Flow of events |1. The student navigates to the "My Applications" section.
+|                            | 2. The system displays a list of the student’s submitted applicati\ons with current statuses (e.g., Under Review, Accepted, Rejected).
 |                            | 4. The student selects an application to view detailed information.
 |                            | 5. If the student chooses to withdraw, they click on the "Withdraw" button.
-|                            | 6. The system confirms the withdrawal and updates the status of the application to "Withdrawn."
-| Alternative flow of events | - If the students application data is incomplete or invalid, the system prompts for corrections before submission.
-                             | - If the position is no longer available (e.g., the deadline has passed or the position has been filled), the 
-                             | system informs the student and prevents the application submission.
-| Iteration                  | #	Iteration 1
+|                            | 6. The system confirms the withdrawal and updates the status of the application to "Withdrawn."  |
+| Alternative flow of events    |  - If the students application data is incomplete or invalid, the system prompts for corrections before submission. |
+|     |  - If the position is no longer available (e.g., the deadline has passed or the position has been filled), the system informs the student and prevents the application submission. |
+| Iteration #         | #	Iteration 1  |
 
-
-| Use case # 1      |   |
-| ------------------ |--|
-| Name              | "enter your reponse here"  |
-| Participating actor  | "enter your reponse here"  |
-| Entry condition(s)     | "enter your reponse here"  |
-| Exit condition(s)           | "enter your reponse here"  |
-| Flow of events | "enter your reponse here"  |
-| Alternative flow of events    | "enter your reponse here"  |
-| Iteration #         | "enter your reponse here"  |
 ----
 # 3. User Interface
 
